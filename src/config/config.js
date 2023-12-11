@@ -16,11 +16,9 @@ const envVarSchema = Joi.object()
     JWT_ACCESS_EXPIRATION_MINUTES: Joi.number()
       .default(30)
       .description("minutes after which access tokens expire"),
-      DIPIXELS_US_STRIPE_SESSION: Joi.string(),
       JWT_REFRESH_EXPIRATION_DAYS: Joi.number()
       .default(30)
       .description("days after which refresh tokens expire"),
-      CODED_STRIPE_SESSION: Joi.string(),
     SMTP_HOST: Joi.string().description("server that will send the emails"),
     SMTP_PORT: Joi.number().description("port to connect to the email server"),
     SMTP_USERNAME: Joi.string().description("username for email server"),
@@ -42,8 +40,6 @@ if (error) {
 module.exports = {
   env: envVars.NODE_ENV,
   port: envVars.PORT,
-  coded_stripe_session: envVars.CODED_STRIPE_SESSION,
-  dipixels_us_stripe_session: envVars.DIPIXELS_US_STRIPE_SESSION,
   mongoose: {
     url:
       envVars.NODE_ENV === "production"

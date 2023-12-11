@@ -4,4 +4,3 @@ module.exports.tokenService = require("./token.service");
 module.exports.productService = require("./product.services");
 module.exports.mailService = require("./mail.service");
 module.exports.orderService=require("./order.service");
-module.exports.paymentService=require("./payment.service");
